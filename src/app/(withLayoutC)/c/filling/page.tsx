@@ -1,10 +1,12 @@
 "use client";
 import CustomTable from "@/components/Table";
+import EditTableRow from "@/components/Table/_components/EditTableRow";
 import { useState } from "react";
 export default function Filling() {
   const [search, setSearch] = useState("");
   const [deletedItem, setDeletedItem] = useState<any>({});
   const [showModal, setShowModal] = useState(false);
+  const [showAddModal, setShowAddModal] = useState(false);
   const [showEditModel, setShowEditModel] = useState({
     open: false,
     rowData: {},
@@ -73,6 +75,7 @@ export default function Filling() {
     setData(filterDeleteData);
     setShowModal(false);
   };
+  const handleClose = () => setShowAddModal(false);
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
       {/* Search & Filters */}
@@ -99,7 +102,10 @@ export default function Filling() {
           <span className="self-center">To</span>
           <input type="date" className="border rounded-md px-3 py-2" />
         </div>
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-md">
+        <button
+          onClick={() => setShowAddModal(true)}
+          className="bg-blue-600 text-white px-4 py-2 rounded-md"
+        >
           Create
         </button>
       </div>
@@ -115,6 +121,7 @@ export default function Filling() {
         setShowEditModel={setShowEditModel}
         showEditModel={showEditModel}
       />
+      {showAddModal && <EditTableRow handleClose={handleClose} />}
     </div>
   );
 }

@@ -54,11 +54,11 @@ export default function EditTableRow({ handleClose }: any) {
           </button>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div>
           <div>
             <label
               htmlFor="orderId"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-lg font-lg text-black"
             >
               Orders ID
             </label>
@@ -70,10 +70,10 @@ export default function EditTableRow({ handleClose }: any) {
               className="mt-1 p-2 w-full border rounded-md focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
-          <div>
+          <div className="mt-4">
             <label
               htmlFor="projectName"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-lg font-lg text-black"
             >
               Project Name
             </label>
@@ -90,7 +90,7 @@ export default function EditTableRow({ handleClose }: any) {
         <div className="mt-4">
           <label
             htmlFor="fileDeleteDate"
-            className="block text-sm font-medium text-gray-700"
+            className="block text-lg font-lg text-black"
           >
             File Delete Date
           </label>
@@ -110,7 +110,7 @@ export default function EditTableRow({ handleClose }: any) {
             <div className="flex  items-center gap-4">
               <label
                 htmlFor="storage"
-                className="block text-sm font-medium text-gray-700"
+                className="block text-lg font-lg text-black"
               >
                 Storage
               </label>
@@ -136,7 +136,7 @@ export default function EditTableRow({ handleClose }: any) {
 
         <div className="mt-4 flex justify-center">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md"
+            className="bg-[#6F70D8]  text-white font-bold py-2 px-4 rounded-md"
             onClick={handleSubmit}
           >
             Add
