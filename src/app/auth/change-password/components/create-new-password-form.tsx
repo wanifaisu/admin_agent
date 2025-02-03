@@ -1,14 +1,13 @@
 "use client";
 
-import { Form, Formik } from "formik";
-import TextInput from "../../../(withLayoutC)/c/components/TextInput";
-import { toFormikValidationSchema } from "zod-formik-adapter";
-import { ChangePasswordFormValidationSchema } from "../lib/validate";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import icon1 from "@/../public/icons/message.png";
 import icon2 from "@/../public/icons/Group.png";
+import { Form, Formik } from "formik";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { toFormikValidationSchema } from "zod-formik-adapter";
+import TextInput from "../../../(withLayoutC)/c/components/TextInput";
+import { ChangePasswordFormValidationSchema } from "../lib/validate";
 function CreateNewPassword() {
   const router = useRouter();
   const [errMsg, setErrMsg] = useState("");
@@ -65,9 +64,12 @@ function CreateNewPassword() {
               name="newpassword"
               type="password"
               placeholder="New password"
-              className="w-full focus:outline-none" label={""} icon={undefined}/>
+              className="w-full focus:outline-none"
+              label={""}
+              icon={undefined}
+            />
           </div>
-          <div className="flex items-center rounded-2xl border border-gray-300 px-4 py-2 bg-white focus-within:border-yellow-500">
+          <div className="flex items-center rounded-2xl border border-gray-300 px-4 py-2 bg-white focus-within:border-yellow-500 mt-5">
             <Image
               src={icon2}
               alt="password Icon"
@@ -79,7 +81,10 @@ function CreateNewPassword() {
               name="confirmpassword"
               type="password"
               placeholder="Confirm password"
-              className="w-full focus:outline-none" label={""} icon={undefined} />
+              className="w-full focus:outline-none"
+              label={""}
+              icon={undefined}
+            />
           </div>
         </div>
 
