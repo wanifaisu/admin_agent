@@ -31,6 +31,6 @@ export const CNavItem: navItem[] = [
   {
     id: 15,
     title: " Logout",
-    url: "/logout",
+    url: "/auth",
   },
 ];

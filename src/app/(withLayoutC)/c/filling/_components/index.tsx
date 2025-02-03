@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { AiOutlineEdit } from "react-icons/ai";
 import { BsTrash3 } from "react-icons/bs";
-import DeleteConfirmation from "./_components/DeleteModel";
-import EditTableRow from "./_components/EditTableRow";
+import DeleteConfirmation from "./DeleteModel";
+import EditTableRow from "./EditTableRow";
 export default function CustomTable({
   headingArr,
   bodyArr,

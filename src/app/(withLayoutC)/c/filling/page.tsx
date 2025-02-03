@@ -1,6 +1,6 @@
 "use client";
-import CustomTable from "@/components/Table";
-import EditTableRow from "@/components/Table/_components/EditTableRow";
+import CustomTable from "@/app/(withLayoutC)/c/filling/_components";
+import EditTableRow from "@/app/(withLayoutC)/c/filling/_components/EditTableRow";
 import { useState } from "react";
 export default function Filling() {
   const [search, setSearch] = useState("");

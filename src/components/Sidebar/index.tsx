@@ -129,12 +129,10 @@ const Sidebar = ({
                   <Link
                     key={item.id}
                     href={isUserRoute ? getRouteForUser(item.url) : item.url}
-                    // className={`hover:bg-slatedark group relative flex items-center gap-0 rounded-sm py-1 font-medium text-black duration-300 ease-in-out dark:hover:bg-meta-4 ${pathname == item.url && "bg-[#ffb200] text-white rounded-lg"
-                    //   }`}
-                    className={`hover:bg-slatedark group relative flex items-center gap-0 rounded-[10px] py-3 font-bold text-base duration-300 ease-in-out ${
+                    className={`hover:bg-slatedark group relative flex items-center gap-0 rounded-[10px] py-2  text-base duration-300 ease-in-out ${
                       pathname == item.url ||
                       pathname === getRouteForUser(item.url)
-                        ? "text-[#B3261E]"
+                        ? "text-[#B3261E] font-bold"
                         : ""
                     }`}
                   >
