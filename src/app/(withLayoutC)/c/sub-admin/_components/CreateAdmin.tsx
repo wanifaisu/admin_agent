@@ -17,8 +17,10 @@ const CreateAdmin = ({ cancelModel, handleSubmit }: any) => {
         </h2>
 
         <div className="space-y-4">
-          <div className="flex items-center border border-gray-200 rounded-lg">
-            <div className="bg-[#1D4ED8] text-white px-3 py-2 w-1/3">Name</div>
+          <div className="flex  items-center border border-gray-200 rounded-lg">
+            <div className="h-13 flex items-center bg-[#1D4ED8]  text-white px-3 py-2 w-1/3">
+              Name
+            </div>
             <input
               type="text"
               className="pl-3 border-none outline-none  w-3/4"
@@ -26,14 +28,16 @@ const CreateAdmin = ({ cancelModel, handleSubmit }: any) => {
           </div>
 
           <div className="flex items-center border border-gray-200 rounded-lg">
-            <div className="bg-[#1D4ED8] text-white px-3 py-2 w-1/3">Gmail</div>
+            <div className="h-13 flex items-center bg-[#1D4ED8] text-white px-3 py-2 w-1/3">
+              Gmail
+            </div>
             <input
               type="text"
               className="pl-3 border-none outline-none  w-3/4"
             />
           </div>
           <div className="flex items-center border border-gray-200 rounded-lg">
-            <div className="bg-[#1D4ED8] text-white px-3 py-2 w-1/3">
+            <div className="h-13 flex items-center bg-[#1D4ED8] text-white px-3 py-2 w-1/3">
               Login Url
             </div>
 
@@ -42,13 +46,13 @@ const CreateAdmin = ({ cancelModel, handleSubmit }: any) => {
                 type="text"
                 className="pl-3 border-none outline-none w-full py-2"
               />
-              <button className="bg-[#D9D9D9] text-black mr-5 px-1 text-[12px] rounded-sm self-center whitespace-nowrap">
+              <button className=" bg-[#D9D9D9] text-black mr-5 px-1 text-[12px] rounded-sm self-center whitespace-nowrap">
                 Url Generate
               </button>
             </div>
           </div>
           <div className="flex items-center border border-gray-200 rounded-lg">
-            <div className="bg-[#1D4ED8] text-white px-3 py-2 w-1/3">
+            <div className="h-13 flex items-center bg-[#1D4ED8] text-white px-3 py-2 w-1/3">
               Password
             </div>
             <input
@@ -57,7 +61,7 @@ const CreateAdmin = ({ cancelModel, handleSubmit }: any) => {
             />
           </div>
           <div className="flex items-center border border-gray-200 rounded-lg">
-            <div className="bg-[#1D4ED8] text-white px-3 py-2 w-1/3">
+            <div className="h-13 flex items-center bg-[#1D4ED8] text-white px-3 py-2 w-1/3">
               Re Password
             </div>
             <input
@@ -66,7 +70,7 @@ const CreateAdmin = ({ cancelModel, handleSubmit }: any) => {
             />
           </div>
           <div className="flex items-center border border-gray-200 rounded-lg">
-            <div className="bg-[#1D4ED8] text-white px-3 py-2 w-1/3">
+            <div className="h-13 flex items-center bg-[#1D4ED8] text-white px-3 py-2 w-1/3">
               Access
             </div>
             <select className="border-none outline-none w-3/4 p-2">
