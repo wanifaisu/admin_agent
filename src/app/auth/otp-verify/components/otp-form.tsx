@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 function OTPForm() {
   const router = useRouter();
@@ -34,7 +34,7 @@ function OTPForm() {
     console.log("Resending OTP...");
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -54,17 +54,18 @@ function OTPForm() {
 
   return (
     <div>
-        
       <div className="flex justify-center gap-2 mb-6">
-        {[setNum1, setNum2, setNum3, setNum4, setNum5, setNum6].map((setNum, index) => (
-          <input
-            key={index}
-            type="text"
-            maxLength={1}
-            className="w-12 h-12 border-2 border-gray-300 rounded-2xl text-center text-xl font-bold focus:border-blue-500 focus:outline-none"
-            onChange={(e) => setNum(e.target.value)}
-          />
-        ))}
+        {[setNum1, setNum2, setNum3, setNum4, setNum5, setNum6].map(
+          (setNum, index) => (
+            <input
+              key={index}
+              type="text"
+              maxLength={1}
+              className="w-12 h-12 border-2 border-gray-300 rounded-xl text-center text-xl font-bold focus:border-blue-500 focus:outline-none"
+              onChange={(e) => setNum(e.target.value)}
+            />
+          )
+        )}
       </div>
 
       <div className="flex justify-between items-center mb-6">
@@ -73,12 +74,16 @@ function OTPForm() {
           onClick={handleResend}
           disabled={timer > 0}
           className={`text-sm font-bold ${
-            timer > 0 ? "text-[#ffb200] cursor-not-allowed" : "text-yellow-500 hover:underline"
+            timer > 0
+              ? "text-[#ffb200] cursor-not-allowed"
+              : "text-yellow-500 hover:underline"
           }`}
         >
           Resend
         </button>
-        <span className="text-sm text-gray-600">{`${Math.floor(timer / 60)}:${String(timer % 60).padStart(2, "0")}`}</span>
+        <span className="text-sm text-gray-600">{`${Math.floor(
+          timer / 60
+        )}:${String(timer % 60).padStart(2, "0")}`}</span>
       </div>
 
       <button
@@ -89,8 +94,7 @@ function OTPForm() {
       >
         {isSubmitting ? "Verifying..." : "Verify"}
       </button>
-      </div >
-      
+    </div>
   );
 }
 
